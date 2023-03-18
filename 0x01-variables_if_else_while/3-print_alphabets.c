@@ -1,24 +1,22 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * *description: 'prints the alphabet in lowercase
- * and then in uppercase, followed by a new line.
+ * Des: 'prints the alphabet in lowercase, and then in uppercase'
  * Return: Always 0
  */
 int main(void)
 {
-        int n = 97;
-        int m = 65;
-       	while (n <= 122)
-        {
-                putchar(n);
-                n++;
-        }
-       	while (m <= 90)
-       	{
-       		putchar(m);
-       		m++;
-       	}
-       	putchar('\n');
-        return (0);
+	int n = 97;
+	int m = 65;
+
+	while (n <= 122)
+	{
+		putchar(n);
+	}
+	while (m <= 90)
+	{
+		putchar(m);
+	}
+	putchar('\n');
+	return (0);
 }
