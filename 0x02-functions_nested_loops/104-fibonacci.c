@@ -8,19 +8,19 @@
   */
 int main(void)
 {
-	int m = 0;
-	long n = 1, o = 2, sum = o;
+	int i = 0;
+	long j = 1, k = 2, sum = k;
 
-	while (o + n < 4000000)
+	while (k + j < 4000000)
 	{
-		o += n;
+		k += j;
 
-		if (o % 2 == 0)
-			sum += o;
+		if (k % 2 == 0)
+			sum += k;
 
-		n = o - n;
+		j = k - j;
 
-		++m;
+		++i;
 	}
 
 	printf("%ld\n", sum);
