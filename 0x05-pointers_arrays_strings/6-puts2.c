@@ -4,13 +4,26 @@
  * puts2 - Prints one char out of two of a string.
  * @str: The string containing characters.
  */
+
 void puts2(char *str)
 {
-	while (*str)
-	{
-		_putchar(*str);
-		str += 2;
-	}
+	int put = 0;
+	int t = 0;
+	char *y = str;
+	int o;
 
+	while (*y != '\0')
+	{
+		y++;
+		puti++;
+	}
+	t = put - 1;
+	for (o = 0 ; o <= t ; o++)
+	{
+		if (o % 2 == 0)
+	{
+		_putchar(str[o]);
+	}
+	}
 	_putchar('\n');
 }
