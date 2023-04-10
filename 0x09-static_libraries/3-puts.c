@@ -2,8 +2,8 @@
 void _puts(char *str)
 #include<stdio.h>
 /**
+ * _puts - function used to write a line or string to stdout
  * main - Entry point
- *
  * Return: Always 0 (Success)
  */
 int main(void)
