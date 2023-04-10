@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <string.h>
 
-int _isalpha(int c)
+int _putchar(char c)
 {
-	return isalpha(c);
+    return putchar(c);
 }
