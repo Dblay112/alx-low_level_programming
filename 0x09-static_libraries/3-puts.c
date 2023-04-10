@@ -1,5 +1,4 @@
 #include "main.h"
-void _puts(char *str)
 #include<stdio.h>
 /**
  * _puts - function used to write a line or string to stdout
