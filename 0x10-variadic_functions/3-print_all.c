@@ -10,7 +10,9 @@ void print_all(const char * const format, ...)
 	int b = 0;
 	char *str, *sep = "";
 	va_list list;
+
 	va_start(list, format);
+
 	if (format)
 	{
 		while (format[b])
@@ -33,14 +35,13 @@ void print_all(const char * const format, ...)
 					printf("%s%s", sep, str);
 						break;
 				default:
-                                                b++;
-                                                continue;
-                                }
-                                sep = ", ";
-                                b++;
-                        }
-                }
-                printf("\n");
-                va_end(list);
-        }
-
+						b++;
+						continue;
+			}
+			sep = ", ";
+			b++;
+		}
+	}
+	printf("\n");
+	va_end(list);
+}
