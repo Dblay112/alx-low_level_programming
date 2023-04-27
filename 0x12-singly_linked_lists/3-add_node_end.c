@@ -3,14 +3,12 @@
 #include "lists.h"
 
 /**
- * add_node_end - Adds a new node at the end
- *                of a list_t list.
- * @head: A pointer the head of the list_t list.
- * @str: The string to be added to the list_t list.
- *
- * Return: If the function fails - NULL.
- *         Otherwise - the address of the new element.
- */
+  * add_node_end - Adds a new node at the end of a list
+  * @head: The original linked list
+  * @str: The string to add to the node
+  *
+  * Return: The address of the new list or NULL if it failed
+  */
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *bri;
@@ -20,8 +18,8 @@ list_t *add_node_end(list_t **head, const char *str)
 	while (str[len])
 		len++;
 
-	new = malloc(sizeof(list_t));
-	if (!new)
+	bri = malloc(sizeof(list_t));
+	if (!bri)
 		return (NULL);
 
 	bri->str = strdup(str);
@@ -41,3 +39,4 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	return (bri);
 }
+
