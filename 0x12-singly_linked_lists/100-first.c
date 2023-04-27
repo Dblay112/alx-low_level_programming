@@ -3,7 +3,7 @@
 void selorm(void) __attribute__ ((constructor));
 
 /**
- * first - prints a sentence before the main
+ * selorm - prints a sentence before the main
  * function is executed
  *
  * Return: Nothing
