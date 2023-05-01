@@ -12,25 +12,26 @@
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	listint_t *bullet, *selorm;
+	listint_t *selorm;
+	listint_t *bright = *head;
 
-	bullet = malloc(sizeof(listint_t));
-	if (bullet == NULL)
+	selorm = malloc(sizeof(listint_t));
+	if (!selorm)
 		return (NULL);
 
-	bullet->n = n;
-	bullet->next = NULL;
+	selorm->n = n;
+	selorm->next = NULL;
 
 	if (*head == NULL)
-		*head = bullet;
-
-	else
 	{
-		selorm = *head;
-		while (selorm->next != NULL)
-			selorm = selorm->next;
-		selorm->next = bullet;
+		*head = selorm;
+		return (selorm);
 	}
 
-	return(NULL);
-}	
+	while (bright->next)
+		bright = bright->next;
+
+	bright->next = selorm;
+
+	return (selorm);
+}
