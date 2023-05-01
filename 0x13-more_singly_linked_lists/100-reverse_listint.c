@@ -19,7 +19,7 @@ listint_t *reverse_listint(listint_t **head)
 	{
 		bullet = (*head)->next;
 		(*head)->next = bomb;
-		bomb = *bullet;
+		bomb = *head;
 		*head = bullet;
 	}
 
