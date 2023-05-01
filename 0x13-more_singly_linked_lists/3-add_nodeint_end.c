@@ -28,7 +28,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	{
 		selorm = *head;
 		while (selorm->next != NULL)
-			selorm = last->next;
+			selorm = selorm->next;
 		selorm->next = bullet;
 	}
 
