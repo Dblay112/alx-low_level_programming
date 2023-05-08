@@ -1,42 +1,38 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
-  * create_file - Creates a file
-  * @filename: pointer to the name of the file to create
-  * @text_content: pointer to a string to write to file
-  *
-  * Return: If the function fails - -1.  Otherwise - 1.
-  */
+ * create_file - creates a file
+ * @filename: filename.
+ * @text_content:content written in the file.
+ *
+ * Return: 1 if it success. -1 if it fails.
+ */
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
+	int bullet;
+	int br;
 
 	if (!filename)
 		return (-1);
 
-	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+
 	if (fd == -1)
 		return (-1);
 
-	if (text_content)
-		write(fd, text_content, _strlen(text_content));
+	if (!text_content)
+		text_content = "";
+
+	for (bullet = 0; text_content[bullet]; bullet++)
+		;
+
+	br = write(fd, text_content, bullet);
+
+	if (br == -1)
+		return (-1);
 
 	close(fd);
+
 	return (1);
-}
-
-/**
-  * _strlen - Returns the length of a string
-  * @s: String to count
-  *
-  * Return: String length
-  */
-int _strlen(char *s)
-{
-	int b = 0;
-
-	while (s[b])
-		b++;
-
-	return (b);
 }
