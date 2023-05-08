@@ -9,23 +9,19 @@
   */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd, bullet;
-	char *buff = malloc(sizeof(char *) * letters);
+	char *buf;
+	ssize_t bd;
+	ssize_t w;
+	ssize_t t;
 
-	if (!buff)
+	fd = open(filename, O_RDONLY);
+	if (bd == -1)
 		return (0);
+	buf = malloc(sizeof(char) * letters);
+	t = read(bd, buf, letters);
+	w = write(STDOUT_FILENO, buf, t);
 
-	if (!filename)
-		return (0);
-
-	fd = open(filename, O_RDONLY, 0600);
-	if (fd == -1)
-		return (0);
-
-	bullet = read(fd, buff, letters);
-	write(STDOUT_FILENO, buff, bullet);
-
-	free(buff);
-	close(fd);
-	return (bullet);
+	free(buf);
+	close(bd);
+	return (w);
 }
