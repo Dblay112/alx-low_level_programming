@@ -6,8 +6,8 @@
  *  * create_buffer - 1024 bytes for a buffer is allocated
  *   * @file: file buffer which stores characters
  *    *
- *     * Return: newly-allocated buffer pointer
- *      */
+ * Return: newly-allocated buffer pointer
+ */
 char *create_buffer(char *file)
 {
 	char *buffer;
@@ -27,7 +27,7 @@ char *create_buffer(char *file)
 /**
  *  * close_file - file descriptors that closes
  *   * @fd: file descriptor closed
- *    */
+ */
 void close_file(int fd)
 {
 	int c;
@@ -46,9 +46,8 @@ void close_file(int fd)
  *   * @argc: argument number count
  *    * @argv: array pointer arguments
  *     *
- *      * Return: 0 on success.
- *       *
- *        */
+ *Return: 0 on success
+ */
 int main(int argc, char *argv[])
 {
 	int from, to, r, w;
@@ -91,6 +90,6 @@ int main(int argc, char *argv[])
 	free(buffer);
 	close_file(from);
 	close_file(to);
-
 	return (0);
+
 }

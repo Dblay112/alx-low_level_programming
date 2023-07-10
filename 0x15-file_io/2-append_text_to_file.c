@@ -6,7 +6,7 @@
  *    * @text_content: end of file string to be added
  *     *
  *      * Return: return 1 on success and -1 and error
- *       */
+ */
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int o, w, len = 0;
