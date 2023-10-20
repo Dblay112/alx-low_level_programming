@@ -23,7 +23,7 @@ listint_t *find_listint_loop(listint_t *head)
 		{
 			bullet = head;
 
-			while (bullet != hare)
+			while (bullet != bomb)
 			{
 				bullet = bullet->next;
 				bomb = bomb->next;
